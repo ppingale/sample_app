@@ -17,7 +17,10 @@ describe User do
   it { should respond_to(:remember_token) }
   it { should respond_to(:authenticate) }
 
+  it { should respond_to(:admin) }
+
   it { should be_valid }
+  it { should_not be_admin }
 
   describe "when name is not present" do
     before { @user.name = " " }
